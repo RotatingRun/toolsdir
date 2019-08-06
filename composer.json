@@ -1,0 +1,6 @@
+{
+    "require": {
+        "owner888/phpspider": "^2.1",
+        "overtrue/pinyin": "~4.0"
+    }
+}
