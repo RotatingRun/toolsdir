@@ -20,7 +20,7 @@ foreach ($fileList as $file)
 	if (strlen($abbrFileName)>0) {
 
 		$i = 0;
-		while (file_exists($newFilePath.'/'.$abbrFileName.'.'.$file['fileType']))
+		while (file_exists($newFilePath.'/bank_'.$abbrFileName.'.'.$file['fileType']))
 		{
 			//为了避免重名，有重名就加一个数字
 			$i++;
@@ -30,7 +30,7 @@ foreach ($fileList as $file)
 				$abbrFileName = substr($abbrFileName,0,strlen($abbrFileName)-1).$i;
 		}
 
-		if (copy($file['filePath'], $newFilePath.'/'.$abbrFileName.'.'.$file['fileType']))
+		if (copy($file['filePath'], $newFilePath.'/bank_'.$abbrFileName.'.'.$file['fileType']))
 		{
 			$firChar = strtoupper(substr($abbrFileName,0,1));
 			$retFileArr[$firChar][$abbrFileName] = str_replace('.'.$file['fileType'],'',$file['fileName']);
