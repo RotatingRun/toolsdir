@@ -1,6 +1,15 @@
 {
     "require": {
         "owner888/phpspider": "^2.1",
-        "overtrue/pinyin": "~4.0"
+        "overtrue/pinyin": "~4.0",
+        "workerman/workerman": "^3.5",
+        "yzalis/identicon": "^1.2",
+        "phpoffice/phpword": "^0.17.0"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.cloud.tencent.com/composer"
+        }
     }
 }
