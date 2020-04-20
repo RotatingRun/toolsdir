@@ -5,4 +5,4 @@ use Identicon\Identicon;
 $identicon = new Identicon();
 
 
-$identicon->displayImage('baohaibin@qq.com', 64, '999999');
+$identicon->displayImage('test.com', 64, '999999');

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "overtrue/pinyin",
-            "version": "4.0.3",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/pinyin.git",
-                "reference": "b17c9c8be23e89fe3f074025b3c6bc034bfb2a90"
+                "reference": "9836dae1783bcf5934508a2abe32eca9ea5ee15d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/b17c9c8be23e89fe3f074025b3c6bc034bfb2a90",
-                "reference": "b17c9c8be23e89fe3f074025b3c6bc034bfb2a90",
+                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/9836dae1783bcf5934508a2abe32eca9ea5ee15d",
+                "reference": "9836dae1783bcf5934508a2abe32eca9ea5ee15d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -27,12 +27,26 @@
                 ]
             },
             "require": {
-                "php": ">=5.5"
+                "php": ">=7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "~7.5"
+                "brainmaestro/composer-git-hooks": "^2.7",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "~8.0"
             },
             "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "composer test",
+                        "composer fix-style"
+                    ],
+                    "pre-push": [
+                        "composer test",
+                        "composer check-style"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Overtrue\\Pinyin\\": "src/"
@@ -47,7 +61,8 @@
             ],
             "authors": [
                 {
-                    "name": "Carlos",
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com",
                     "homepage": "http://github.com/overtrue"
                 }
             ],
@@ -58,7 +73,7 @@
                 "Pinyin",
                 "cn2pinyin"
             ],
-            "time": "2019-04-21T14:33:59+00:00"
+            "time": "2020-04-13T08:53:30+00:00"
         },
         {
             "name": "owner888/phpspider",
@@ -333,16 +348,16 @@
         },
         {
             "name": "workerman/workerman",
-            "version": "v3.5.20",
+            "version": "v3.5.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/Workerman.git",
-                "reference": "4d590130310a8d7632f807120c3ca1c0f55ed0d7"
+                "reference": "20ca679fc530da94f13c43020161679fda19a6d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/Workerman/zipball/4d590130310a8d7632f807120c3ca1c0f55ed0d7",
-                "reference": "4d590130310a8d7632f807120c3ca1c0f55ed0d7",
+                "url": "https://api.github.com/repos/walkor/Workerman/zipball/20ca679fc530da94f13c43020161679fda19a6d9",
+                "reference": "20ca679fc530da94f13c43020161679fda19a6d9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -370,9 +385,9 @@
             "authors": [
                 {
                     "name": "walkor",
-                    "role": "Developer",
                     "email": "walkor@workerman.net",
-                    "homepage": "http://www.workerman.net"
+                    "homepage": "http://www.workerman.net",
+                    "role": "Developer"
                 }
             ],
             "description": "An asynchronous event driven PHP framework for easily building fast, scalable network applications.",
@@ -381,7 +396,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2019-07-02T10:23:18+00:00"
+            "time": "2020-03-31T07:40:13+00:00"
         },
         {
             "name": "yzalis/identicon",
